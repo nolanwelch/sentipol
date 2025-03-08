@@ -1,0 +1,28 @@
+[project]
+name = "app"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Nolan Welch",email = "nolanwelch@outlook.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi (>=0.115.11,<0.116.0)",
+    "uvicorn (>=0.34.0,<0.35.0)",
+    "pydantic[dotenv] (>=2.10.6,<3.0.0)",
+    "sqlalchemy (>=2.0.38,<3.0.0)",
+    "psycopg2-binary (>=2.9.10,<3.0.0)",
+    "redis (>=5.2.1,<6.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+pytest-asyncio = "^0.25.3"
+httpx = "^0.28.1"
+
